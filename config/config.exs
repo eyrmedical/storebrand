@@ -30,4 +30,4 @@ use Mix.Config
 #     import_config "#{Mix.env}.exs"
 
 config :storebrand, Storebrand,
-  url: "https://xsg.storebrand.no/helseapp/fdc"
+  url: "https://b2b.storebrand.no/helseapp/fdc"
