@@ -3,7 +3,7 @@ defmodule Storebrand.Mixfile do
 
   def project do
     [app: :storebrand,
-     version: "0.1.0",
+     version: "0.1.1",
      elixir: "~> 1.4",
      description: "Wrapper to use Storebrand REST API.",
      build_embedded: Mix.env == :prod,
