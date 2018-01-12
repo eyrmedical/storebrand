@@ -18,7 +18,7 @@ Copy your push service credentials from Bluemix UI, to application config file:
 
 ```
 config :storebrand, Storebrand,
-  url: "https://xsg.storebrand.no/helseapp/fdc"
+  url: "https://b2b.storebrand.no/helseapp/fdc"
 ```
 
 # Usage
@@ -31,7 +31,7 @@ Check the `test` folder for usage examples.
 `{:ok, response} = Storebrand.policy_status("XXXXXXXX", [
   firstname: "First Name",
   lastname: "Last Name",
-  birthdate: "01.01.1991"
+  dateOfBirth: "01.01.1991"
 ])`
 
 # Disclaimer
