@@ -85,9 +85,9 @@ defmodule Storebrand do
     params = Enum.reduce opts, %{}, fn(option, acc) ->
       case option do
         {:firstname, value} ->
-          Map.put(acc, "firstname", parse_param(value))
+          Map.put(acc, "firstname", value)
         {:lastname, value} ->
-          Map.put(acc, "lastname", parse_param(value))
+          Map.put(acc, "lastname", value)
         {:birthdate, value} ->
           Map.put(acc, "dateOfBirth", parse_birthdate(value))
         _ ->
@@ -100,11 +100,6 @@ defmodule Storebrand do
   @spec parse_policy_number(policy) :: String.t
   defp parse_policy_number(number) when is_integer(number), do: to_string(number)
   defp parse_policy_number(number) when is_bitstring(number), do: number
-
-  @spec parse_param(String.t) :: String.t
-  defp parse_param(param) when is_bitstring(param) do
-    String.replace(param, " ", "+")
-  end
 
   @spec parse_birthdate(date) :: String.t
   defp parse_birthdate(%Date{} = date) do
