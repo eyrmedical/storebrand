@@ -85,15 +85,15 @@ defmodule Storebrand do
     params = Enum.reduce opts, %{}, fn(option, acc) ->
       case option do
         {:firstname, value} ->
-          Map.put(acc, "firstname", parse_param(value))
+          Map.put(acc, "firstname", value)
         {:lastname, value} ->
-          Map.put(acc, "lastname", parse_param(value))
+          Map.put(acc, "lastname", value)
         {:birthdate, value} ->
           Map.put(acc, "dateOfBirth", parse_birthdate(value))
         _ ->
           acc
       end
-    end 
+    end
     URI.encode_query(params)
   end
 
